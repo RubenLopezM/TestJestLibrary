@@ -4,6 +4,12 @@ const sum = (a,b) => {
 
 console.log(sum(7,3))
 
+let oneEuroIs = {
+    "JPY": 127.9, // japan yen
+    "USD": 1.2, // us dollar
+    "GBP": 0.8, // british pound
+}
+
 
 const fromEuroToDollar = function(valueInEuro){
     // convert the given valueInEuro to dollars
@@ -14,13 +20,13 @@ const fromEuroToDollar = function(valueInEuro){
 
 const fromDollartoYen = function(valueInDollar){
     // convert the given valueInEuro to dollars
-    let valueInYen = valueInDollar * 106.58;
+    let valueInYen = (valueInDollar/oneEuroIs.USD)*oneEuroIs.JPY;
     //return the dollar value
     return valueInYen;
 }
 
 const fromYentoPound = function(valueYen){
-    let valueinPound= valueYen*0.00625
+    let valueinPound= (valueYen/oneEuroIs.JPY)*oneEuroIs.GBP
     return valueinPound
 }
 

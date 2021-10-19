@@ -28,10 +28,10 @@ test("We test the function Dollar to yen", function(){
     // use the function like its suppoed to be used
     const yens = fromDollartoYen(3.5)
 
-    const expected = (3.5*106.58); 
+    const expected = (3.5/1.2*127.9); 
     
     // this is the comparison for the unit test
-     expect(fromDollartoYen(3.5)).toBe(373.03); 
+     expect(fromDollartoYen(3.5)).toBe(373.04166666666674); 
 })
 
 test("We test the function Yen to Pound", function(){
@@ -40,7 +40,7 @@ test("We test the function Yen to Pound", function(){
 
     const pounds = fromYentoPound(2);
 
-    const expected= 2*0.00625
+    const expected= (2/127.9)*0.8
 
-    expect(fromYentoPound(2)).toBe(0.0125)
+    expect(fromYentoPound(2)).toBe(0.012509773260359656)
 })
